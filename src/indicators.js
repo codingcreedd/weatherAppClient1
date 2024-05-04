@@ -40,7 +40,6 @@ windIndicatorBtn.addEventListener('click', () => {
 
 function addCountries(){
     countries.forEach(country => {
-        console.log(countries);
         fetchWeatherData(country.name).then(weatherData => {
             addCountriesTempIndicators(weatherData, country.name);
             addCountriesWindIndicators(weatherData, country.name);

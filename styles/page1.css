@@ -252,6 +252,11 @@ main > h1{
         flex-direction: column !important;
         gap: 1rem;
     }
+
+    nav{
+        font-size: 0.8rem;
+        width: 100%;
+    }
 }
 
 @media (width <= 500px) {
@@ -267,6 +272,19 @@ main > h1{
 }
 
 @media (width <= 850px){
+
+    body{
+        overflow: hidden;
+    }
+
+    .right-side #temp-nav{
+        gap: 0.3rem;
+    }
+
+    .right-side #temp-nav span{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
     .left-side{
         position: absolute;
         width: 400px;
