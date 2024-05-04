@@ -90,7 +90,7 @@ main > h1{
       & {
         -ms-overflow-style: none; 
       }
-      scrollbar-width: none;
+    scrollbar-width: none !important;
 }
 
 #country-list div{
