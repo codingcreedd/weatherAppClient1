@@ -10,7 +10,7 @@
 body{
     width: 100%;
     min-height: 100vh;
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 main{
@@ -275,7 +275,7 @@ main > h1{
 @media (width <= 850px){
 
     body{
-        overflow: hidden;
+        overflow: hidden !important;
     }
 
     .right-side #temp-nav{
