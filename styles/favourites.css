@@ -1,0 +1,34 @@
+*, *::before, *::after {box-sizing: border-box;}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.favourites-section{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2rem;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.favCountry{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #4242ff;
+    border-radius: 0.5rem;
+    transition: 0.5s;
+}
+
+.favCountry :nth-child(2){
+    cursor: pointer;
+}
+
+.favCountry:hover{
+    background: #4242ff;
+    color: white;
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="styles/page1.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="src/index.js" defer></script>
+    <script src="src/indicators.js" defer></script>
+    <link rel="stylesheet" href="styles/favourites.css">
+    <link rel="stylesheet" href="styles/indicators.css">
+</head>
+<body>
+    <main>
+
+        <!--LEFT SECTION-->
+        <section class="left-side">
+            <i class='bx bxs-exit'></i>
+            <div class="search-country">
+                <input type="text" name="country" id="countrySearch" placeholder="Search Country">
+                <i class='bx bx-search-alt-2'></i>
+            </div>
+            
+            <div id="country-list" class="country-list"></div>
+        </section>
+
+        <!--RIGHT SECTION-->
+        <section class="right-side">
+            <nav>
+                <div id="days-nav">
+                    <span id="todayNav" class="toggledNav">Weather</span>
+                    <!--<span id="weekNav">Week</span>-->
+                    <span id="favNav">Favourites</span>
+                </div>
+
+                <div class="indicators-nav">
+                    <i class='bx bxs-sun' id="tempIndicator"></i>
+                    <i class='bx bx-wind' id="windIndicator"></i>
+                </div>
+
+                <div id="temp-nav">
+                    <span id="degC" class="toggledTemp celcTemp">&deg;C</span>
+                    <span id="degF" class="fehrTemp">&deg;F</span>
+                </div>
+
+                <i class='bx bx-menu' style="display: none;"></i>
+
+            </nav>
+
+            <div class="today">
+                <h1 style="margin-bottom: 1rem;" id="country-name">Country, City</h1>
+
+                <h1 id="temperature" style="margin-bottom: 4rem;">0 &deg;</h1>
+
+                <!--DEFAULT DIVS BEFORE FETCHING-->
+                <div class="hourInfo">
+                    <div class="hour">
+                        <span id="time"></span>
+                        <img src="" placeholder="IMG" id="icon">
+                        <span id="tempHour" class="tempHour"></span>
+                    </div>
+                    <div class="hour">
+                        <span id="time"></span>
+                        <img src="" placeholder="IMG" id="icon">
+                        <span id="tempHour" class="tempHour"></span>
+                    </div>
+                    <div class="hour">
+                        <span id="time"></span>
+                        <img src="" placeholder="IMG" id="icon">
+                        <span id="tempHour" class="tempHour"></span>
+                    </div>
+                    <div class="hour">
+                        <span id="time"></span>
+                        <img src="" placeholder="IMG" id="icon">
+                        <span id="tempHour" class="tempHour"></span>
+                    </div>
+                    <div class="hour">
+                        <span id="time"></span>
+                        <img src="" placeholder="IMG" id="icon">
+                        <span id="tempHour" class="tempHour"></span>
+                    </div>
+                    <div class="hour">
+                        <span id="time"></span>
+                        <img src="" placeholder="IMG" id="icon">
+                        <span id="tempHour" class="tempHour"></span>
+                    </div>
+                    <div class="hour">
+                        <span id="time"></span>
+                        <img src="" placeholder="IMG" id="icon">
+                        <span id="tempHour" class="tempHour"></span>
+                    </div>
+                    <div class="hour">
+                        <span id="time"></span>
+                        <img src="" placeholder="IMG" id="icon">
+                        <span id="tempHour" class="tempHour"></span>
+                    </div>
+                    <div class="hour">
+                        <span id="time"></span>
+                        <img src="" placeholder="IMG" id="icon">
+                        <span id="tempHour" class="tempHour"></span>
+                    </div>
+                    <div class="hour">
+                        <span id="time"></span>
+                        <img src="" placeholder="IMG" id="icon">
+                        <span id="tempHour" class="tempHour"></span>
+                    </div>
+                    <div class="hour">
+                        <span id="time"></span>
+                        <img src="" placeholder="IMG" id="icon">
+                        <span id="tempHour" class="tempHour"></span>
+                    </div>
+                    <div class="hour">
+                        <span id="time"></span>
+                        <img src="" placeholder="IMG" id="icon">
+                        <span id="tempHour" class="tempHour"></span>
+                    </div>
+                    <div class="hour">
+                        <span id="time"></span>
+                        <img src="" placeholder="IMG" id="icon">
+                        <span id="tempHour" class="tempHour"></span>
+                    </div>
+                    <div class="hour">
+                        <span id="time"></span>
+                        <img src="" placeholder="IMG" id="icon">
+                        <span id="tempHour" class="tempHour"></span>
+                    </div>
+                    <div class="hour">
+                        <span id="time"></span>
+                        <img src="" placeholder="IMG" id="icon">
+                        <span id="tempHour" class="tempHour"></span>
+                    </div>
+                    <div class="hour">
+                        <span id="time"></span>
+                        <img src="" placeholder="IMG" id="icon">
+                        <span id="tempHour" class="tempHour"></span>
+                    </div>
+                    <div class="hour">
+                        <span id="time"></span>
+                        <img src="" placeholder="IMG" id="icon">
+                        <span id="tempHour" class="tempHour"></span>
+                    </div>
+                    <div class="hour">
+                        <span id="time"></span>
+                        <img src="" placeholder="IMG" id="icon">
+                        <span id="tempHour" class="tempHour"></span>
+                    </div>
+                    <div class="hour">
+                        <span id="time"></span>
+                        <img src="" placeholder="IMG" id="icon">
+                        <span id="tempHour" class="tempHour"></span>
+                    </div>
+                    <div class="hour">
+                        <span id="time"></span>
+                        <img src="" placeholder="IMG" id="icon">
+                        <span id="tempHour" class="tempHour"></span>
+                    </div>
+                    <div class="hour">
+                        <span id="time"></span>
+                        <img src="" placeholder="IMG" id="icon">
+                        <span id="tempHour" class="tempHour"></span>
+                    </div>
+                    <div class="hour">
+                        <span id="time"></span>
+                        <img src="" placeholder="IMG" id="icon">
+                        <span id="tempHour" class="tempHour"></span>
+                    </div>
+                    <div class="hour">
+                        <span id="time"></span>
+                        <img src="" placeholder="IMG" id="icon">
+                        <span id="tempHour" class="tempHour"></span>
+                    </div>
+                    <div class="hour">
+                        <span id="time"></span>
+                        <img src="" placeholder="IMG" id="icon">
+                        <span id="tempHour" class="tempHour"></span>
+                    </div>
+                </div> <!--IF TODAY CLICKED-->
+
+
+                <div class="daysInfoDiv" style="display: none;"></div> <!--IF WEEK CLICKED-->
+
+                <h1>Today's Highlights</h1>
+
+                <div class="highlights">
+                    <div class="highlight-component">
+                        <span>UV INDEX</span>
+                        <h1 id="uv-index">0</h1>
+                        <span id="uv-index-level">High</span>
+                    </div>
+                    <div class="highlight-component">
+                        <span>Wind Status</span>
+                        <h1 id="wind-status">0</h1>
+                        <span id="wind-speed">km/h</span>
+                    </div>
+                    <div class="highlight-component">
+                        <span>Sunrise & Sunset</span>
+                        <h1 id="sunrise">12:00 AM</h1>
+                        <span id="sunset">12:00 PM</span>
+                    </div>
+
+                    <div class="highlight-component">
+                        <span>Humidity</span>
+                        <h1 id="humidity">0%</h1>
+                        <span id="humidity-level">Moderate</span>
+                    </div>
+                    <div class="highlight-component">
+                        <span>Visibility</span>
+                        <h1 id="visibility">0</h1>
+                        <span id="visibility-level">Very Light Mist</span>
+                    </div>
+                    <div class="highlight-component">
+                        <span>Air Quality</span>
+                        <h1 id="air-quality">0</h1>
+                        <span id="air-quality-description">Good</span>
+                    </div>
+                </div>
+            </div>
+
+            <section class="favourites-section hidden"></section>
+
+            <section class="indicators-section hidden">
+                <div class="tempIndicators hidden"></div>
+                <div class="windIndicators hidden"></div>
+            </section>
+
+            <footer >Made with <i class='bx bxs-heart' style="color: red;"></i> By Roua</footer>
+        </section>
+
+
+
+    </main>
+    
+</body>
+</html>
