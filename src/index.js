@@ -280,8 +280,7 @@ function renderHighlights(weatherData) {
     document.getElementById('visibility').innerText = weatherData.current.vis_km;
     document.getElementById('visibility-level').innerText = getVisibilityLevel(weatherData.current.vis_km);
 
-    document.getElementById('air-quality').innerText = weatherData.current.air_quality.pm25;
-    document.getElementById('air-quality-description').innerText = getAirQualityDescription(weatherData.current.air_quality.pm25);
+    document.getElementById('gust').innerText = `${weatherData.current.gust_kph}`;
 }
 
 function getUVIndexLevel(uvIndex) {
@@ -294,10 +293,6 @@ function getHumidityLevel(humidity) {
 
 function getVisibilityLevel(visibility) {
     return (visibility < 1) ? 'Very Low' : (visibility < 5) ? 'Low' : (visibility < 10) ? 'Moderate' : 'High';
-}
-
-function getAirQualityDescription(pm25) {
-    return (pm25 < 50) ? 'Good' : (pm25 < 100) ? 'Moderate' : 'Poor';
 }
 
 
@@ -404,8 +399,7 @@ menu.addEventListener('click', () => {
 
 closeMenu.addEventListener('click', () => {
     leftSide.style.display = 'none';
-    leftSide.style.cssText = 'transform: translateX(1000px);';
-})
+});
 
 window.addEventListener('resize', () => {
     if(document.documentElement.clientWidth > 850){
