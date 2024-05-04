@@ -274,7 +274,7 @@ main > h1{
 
 @media (width <= 850px){
 
-    body{
+    main{
         overflow: hidden !important;
     }
 
