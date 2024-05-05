@@ -49,21 +49,21 @@ fetch('countries.json')
             }
         });
 
-    listItem.firstChild.nextSibling.addEventListener('click', (e) => {
-        if (e.target && e.target.matches('.bxs-star')) {
-            const parentNode = e.target.parentNode;
-            const countryNameSpan = parentNode.querySelector('.countryNameClicker').innerText;
-            if(e.target.style.color === 'gold'){
-                e.target.style.color = "black";
-                removeFromFavourites(countryNameSpan);
+        listItem.firstChild.nextSibling.addEventListener('click', (e) => {
+            if (e.target && e.target.matches('.bxs-star')) {
+                const parentNode = e.target.parentNode;
+                const countryNameSpan = parentNode.querySelector('.countryNameClicker').innerText;
+                if(e.target.style.color === 'gold'){
+                    e.target.style.color = "black";
+                    removeFromFavourites(countryNameSpan);
+                }
+                else{
+                    e.target.style.color = "gold";
+                    const clonedItem = listItem.cloneNode(true);
+                    addToFavourites(countryNameSpan, clonedItem);                
+                }
             }
-            else{
-                e.target.style.color = "gold";
-                const clonedItem = listItem.cloneNode(true);
-                addToFavourites(countryNameSpan, clonedItem);                
-            }
-        }
-    });
+        });
 
       countryContainer.addEventListener('click', e => {
         const tempF = document.getElementById('degF');

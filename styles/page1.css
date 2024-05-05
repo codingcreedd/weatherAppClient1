@@ -9,6 +9,7 @@
 
 body{
     width: 100%;
+    max-width: 100VW;
     min-height: 100vh;
     overflow: hidden !important;
 }
